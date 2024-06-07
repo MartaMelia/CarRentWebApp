@@ -1,0 +1,258 @@
+<div class="landing-container">
+  <div class="starting-container">
+    <div class="info-side">
+      <h1>Find, book and rent a car <span>Easily</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit</p>
+    </div>
+    <img
+      src="https://assets-clean.local-car-finder.com/images/14327/14327_st1280_089.png"
+      alt=""
+    />
+  </div>
+  <div class="steps text-center">
+    <p class="landing-titles">HOW IT WORKS</p>
+    <h2 class="my-4">Rent with following 3 working steps</h2>
+    <div
+      class="d-flex justify-content-center align-items-center gap-5 my-5 flex-wrap"
+    >
+      <div class="step">
+        <div class="icon-div">
+          <i class="bi bi-circle"></i>
+        </div>
+        <h6>Choose location</h6>
+        <small>Choose your and find your best car</small>
+      </div>
+      <div class="step">
+        <div class="icon-div">
+          <i class="bi bi-circle"></i>
+        </div>
+        <h6>Choose location</h6>
+        <small>Choose your and find your best car</small>
+      </div>
+
+      <div class="step">
+        <div class="icon-div">
+          <i class="bi bi-circle"></i>
+        </div>
+        <h6>Choose location</h6>
+        <small>Choose your and find your best car</small>
+      </div>
+    </div>
+  </div>
+  <div class="slider">
+    <div class="slide-track">
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/thumbs/2x/mcdonalds-black-logo.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/images/large/2x/starbucks-logo-black-and-white.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/general-electric-black-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/nfl-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/mercedes-benz-6-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+      <div class="slide">
+        <img
+          src="https://cdn.freebiesupply.com/logos/large/2x/hogwarts-logo-png-transparent.png"
+          alt=""
+        />
+      </div>
+    </div>
+  </div>
+  <div class="main-cars">
+    <p class="landing-titles">POPULAR RENTAL DEALS</p>
+    <h2 class="text-center mt-3 mb-5">Most popular cars rental deals</h2>
+    <div
+      class="car-card-container d-flex justify-content-center flex-wrap gap-5"
+    >
+      <div class="car-card" *ngFor="let car of cars">
+        <div class="car-img">
+          <img src="{{ car.picture }}" width="200px" alt="" />
+        </div>
+        <h5>{{ car.brand + " " + car.model }}</h5>
+        <div class="short-info">
+          <div>
+            <p>{{ car.passengers }} passengers</p>
+            <p>{{ car.city }}</p>
+          </div>
+          <div>
+            <p>{{ car.transmition }}</p>
+            <p>{{ car.year }}</p>
+          </div>
+        </div>
+        <hr />
+        <div class="price-div">
+          <p>Price</p>
+          <p>₾ {{ car.price }} <span>/day</span></p>
+        </div>
+        <div class="rent-btn-div">
+          <button type="button" (click)="rent(car.id)">
+            Rent now<span class="ms-2 text-white">&#10140;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="show-cars text-center my-5">
+      <button class="show-cars-btn" (click)="goToCarsPage()">
+        Show all cars <span class="ms-2 text-muted">&#10140;</span>
+      </button>
+    </div>
+  </div>
+  <div class="offers">
+    <div class="d-flex align-items-center justify-content-evenly">
+      <div class="car">
+        <img
+          src="https://wallpapers.com/images/high/white-audi-a6-avant-luxury-car-h-d-7e7frw5aup2wok5y-2.png"
+          alt="CAR"
+        />
+      </div>
+      <div class="offer-info">
+        <p class="landing-titles ms-0 me-auto">WHY CHOOSE US</p>
+        <h2 class="my-4">We offer the best experience with our rental deals</h2>
+        <div class="offer-list">
+          <div class="offl">
+            <div class="icon-div">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div class="offl-info">
+              <h6>Best price guaranteed</h6>
+              <small
+                >Find a lower price? We'll refund you 100% of the
+                difference.</small
+              >
+            </div>
+          </div>
+          <div class="offl">
+            <div class="icon-div">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div class="offl-info">
+              <h6>Best price guaranteed</h6>
+              <small
+                >Find a lower price? We'll refund you 100% of the
+                difference.</small
+              >
+            </div>
+          </div>
+          <div class="offl">
+            <div class="icon-div">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div class="offl-info">
+              <h6>Best price guaranteed</h6>
+              <small
+                >Find a lower price? We'll refund you 100% of the
+                difference.</small
+              >
+            </div>
+          </div>
+          <div class="offl">
+            <div class="icon-div">
+              <i class="bi bi-circle"></i>
+            </div>
+            <div class="offl-info">
+              <h6>Best price guaranteed</h6>
+              <small
+                >Find a lower price? We'll refund you 100% of the
+                difference.</small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

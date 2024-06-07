@@ -1,0 +1,79 @@
+@media screen and (max-width: 668px) {
+  .car-card .car-img {
+    margin: auto;
+  }
+}
+
+.filter-container {
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.main-cars {
+  .car-card-container {
+    .car-card {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      border-radius: 6px;
+      border: 1px solid #1570d124;
+      padding: 1rem;
+      margin: 1rem 0;
+      .car-img {
+        height: 100%;
+        width: 170px;
+        img {
+          width: 100%;
+          height: 120px;
+          object-fit: cover;
+        }
+      }
+      .short-info {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 5rem;
+        div {
+          p {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+      .price-rent-div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 3rem;
+        .price-div {
+          text-align: end;
+          font-weight: 700;
+          p {
+            margin: 0;
+          }
+          span {
+            font-weight: 400;
+            color: gray;
+          }
+        }
+        .rent-btn-div {
+          button {
+            border: none;
+            background-color: #1571d1;
+            color: white;
+            border-radius: 6px;
+            padding: 0.25rem 1rem;
+          }
+        }
+      }
+    }
+  }
+  .show-cars {
+    .show-cars-btn {
+      border: 1.5px solid rgba(128, 128, 128, 0.5);
+      background-color: transparent;
+      border-radius: 6px;
+      padding: 0.25rem 2rem;
+    }
+  }
+}

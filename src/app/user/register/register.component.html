@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="inner">
+    <form (ngSubmit)="register()" [formGroup]="form">
+      <h3>Create an account</h3>
+      <div class="form-holder">
+        <span class="bi bi-person"></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="First Name"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="form-holder">
+        <span class="bi bi-person"></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Last Name"
+          formControlName="lastName"
+        />
+      </div>
+      <div class="form-holder">
+        <span class="bi bi-person"></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Phone Number"
+          formControlName="phoneNumber"
+        />
+      </div>
+      <div class="form-holder">
+        <span class="bi bi-person"></span>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Mail"
+          formControlName="email"
+        />
+      </div>
+      <div class="form-holder">
+        <span class="bi bi-person"></span>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Password"
+          formControlName="password"
+        />
+      </div>
+      <div class="form-holder">
+        <span class="bi bi-person"></span>
+        <input
+          type="password"
+          class="form-control"
+          placeholder="Confirm Password"
+          formControlName="confirmPassword"
+        />
+      </div>
+      <button class="auth">
+        <span>Register</span>
+      </button>
+    </form>
+  </div>
+</div>

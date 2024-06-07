@@ -1,0 +1,158 @@
+////////////////////////////  GENERAL  ////////////////////////////
+body, html {
+  overflow-x: hidden;
+  width: 100vw !important;
+}
+.cdk-overlay-container {
+  z-index: 99;
+}
+.landing-container, .cars-container, .add-new-car-component, .favorite-car-component, .owned-car-component, .rented-car-component, .car-description-component {
+  padding-top: 3rem;
+  // position: relative;
+  // z-index: -1;
+}
+////////////////////////////  GENERAL  ////////////////////////////
+
+////////////////////////////  NAVBAR  ////////////////////////////
+nav {
+  z-index: 0 !important;
+  .navbar-brand {
+    cursor: pointer;
+  }
+  button.login {
+    border: none;
+    background-color: transparent;
+  }
+  button.register {
+    border: none;
+    border-radius: 0.25rem;
+    background-color: #3d84ca;
+    padding: 0.25rem 1rem;
+    color: white;
+  }
+
+}
+////////////////////////////  NAVBAR  ////////////////////////////
+
+
+////////////////////////////  LOGIN REGISTER  ////////////////////////////
+@media (min-width: 992px) {
+  form {
+    width: 350px;
+  }
+}
+@media (max-width: 991px) {
+  .inner {
+    width: 300px;
+    left: 4%;
+  }
+}
+@media (max-width: 767px) {
+  .inner {
+    width: 100%;
+    left: 0;
+  }
+  form {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+  }
+  .wrapper {
+    background: none;
+  }
+}
+
+
+.wrapper {
+	letter-spacing: 3px;
+  h3 {
+  color: #333;
+    font-weight: 400;
+    text-align: center;
+	text-transform: uppercase;
+  }
+  .inner {
+    position: relative;
+    // width: 435px;
+    padding: 35px;
+    .form-holder {
+      position: relative;
+      span.bi {
+        font-size: 18px;
+        position: absolute;
+        left: .5rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+    }
+  }
+}
+
+.form-control {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px rgb(168, 168, 168) solid;
+  padding-left: 2rem;
+  margin: 2rem 0;
+  &:focus {
+    border-bottom: 1px #99ccff solid;
+    box-shadow: none;
+  }
+}
+
+button.auth {
+	border: none;
+	width: 100%;
+	height: 49px;
+	margin-top: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	background: #99ccff;
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "Muli-SemiBold";
+	font-size: 15px;
+	letter-spacing: 2px;
+	transition: all 0.5s;
+    position: relative;
+    overflow: hidden;
+    span {
+    	position: relative;
+    	z-index: 2;
+    }
+    &:before, &:after {
+	    content: '';
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 1;
+	    background-color: rgba(52,152,253,0.25);
+	    -webkit-transition: all 0.3s;
+	    -moz-transition: all 0.3s;
+	    -o-transition: all 0.3s;
+	    transition: all 0.3s;
+	    -webkit-transform: translate(-100%,0);
+	    transform: translate(-100%,0);
+	    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+	    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+    }
+    &:after {
+    	-webkit-transition-delay: 0.2s;
+    	transition-delay: 0.2s;
+    }
+    &:hover {
+    	&:before, &:after {
+    		-webkit-transform: translate(0,0);
+    		transform: translate(0,0);
+    	}
+    }
+}
+////////////////////////////  LOGIN REGISTER  ////////////////////////////

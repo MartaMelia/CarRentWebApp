@@ -1,0 +1,28 @@
+<div class="wrapper">
+  <div class="inner">
+    <form (ngSubmit)="submitLogin()" [formGroup]="loginForm">
+      <h3>Log in</h3>
+      <div class="form-holder">
+        <span class="bi bi-telephone"></span>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="phoneNumber"
+          placeholder="Phone Number"
+        />
+      </div>
+      <div class="form-holder">
+        <span class="bi bi-lock"></span>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Password"
+        />
+      </div>
+      <button type="submit" class="auth">
+        <span>Submit</span>
+      </button>
+    </form>
+  </div>
+</div>

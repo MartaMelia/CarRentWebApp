@@ -1,0 +1,31 @@
+<nav class="navbar fixed-top bg-white">
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="landing()">CarRental</a>
+    <div class="d-flex gap-2" *ngIf="!isLoggedIn">
+      <button type="button" class="login" (click)="openLoginDialog()">
+        Sign in
+      </button>
+      <button type="button" class="register" (click)="openRegisterDialog()">
+        Sign up
+      </button>
+    </div>
+    <div class="account-btn" *ngIf="isLoggedIn">
+      <button
+        mat-button
+        [matMenuTriggerFor]="beforeMenu"
+        class="register text-white"
+      >
+        Profile
+      </button>
+      <mat-menu #beforeMenu="matMenu" xPosition="before" class="p-3 mt-3">
+        <h6 class="text-center mt-3 mb-4">{{ fullName }}</h6>
+        <hr />
+        <!-- <button mat-menu-item routerLink="/add-new-car">Register Car</button>
+        <button mat-menu-item routerLink="/rented-cars">Rented Cars</button>
+        <button mat-menu-item routerLink="/favorite-cars">Liked Cars</button>
+        <button mat-menu-item routerLink="/owned-cars">My Cars</button> -->
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+  </div>
+</nav>

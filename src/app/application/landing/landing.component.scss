@@ -1,0 +1,218 @@
+@media screen and (max-width: 668px) {
+  .car {
+    display: none;
+  }
+  .offer-info {
+    width: 100%;
+    min-width: 400px;
+  }
+}
+
+@media screen and (min-width: 669px) {
+  .offer-info {
+    max-width: 480px;
+  }
+}
+
+.landing-container {
+  &::after {
+    content: '';
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    background-color: #edf5ff;
+    position: absolute;
+    bottom: -1rem;
+    left: -5rem;
+    z-index: -5;
+    transform: rotate(-45deg);
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 10px 0px;
+  }
+  &::before {
+    content: '';
+    width: 500px;
+    height: 600px;
+    background-color: #edf5ff;
+    position: absolute;
+    top: 0;
+    right: -10rem;
+    z-index: -5;
+    transform: rotate(-45deg);
+    box-shadow: rgba(100, 100, 111, 0.1) 0px 7px 10px 0px;
+  }
+  .starting-container {
+    z-index: -1;
+    height: 70vh;
+    position: relative;
+    .info-side {
+      z-index: 99;
+      position: absolute;
+      left: 3rem;
+      top: 50%;
+      transform: translate(0, -50%);
+      max-width: 300px;
+      span {
+        color: rgb(0, 140, 196);
+      }
+    }
+    img {
+      width: 800px;
+      position: absolute;
+      left: 55%;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+  }
+  .steps {
+    .icon-div {
+      background-color: #edf5ff;
+      border-radius: 6px;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 1rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .step {
+      max-width: 140px;
+    }
+  }
+  .slider {
+    position: relative;
+    z-index: -2;
+    margin-bottom: 3rem;
+    img {
+      opacity: .8;
+      width: 100px;
+      height: 80px;
+      object-fit: cover;
+      animation: scroll 60s linear infinite;
+    }
+    .slide-track {
+      width: 100%;
+      display: flex;
+      gap: 3em;
+      overflow: hidden;
+    }
+  }
+  .offers {
+    margin: 3rem 0;
+    .car {
+      flex-basis: 50%;
+      max-width: 500px;
+      position: relative;
+      img {
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        // transform: scalex(-1);
+      }
+    }
+    .offer-info {
+      flex-basis: 50%;
+      .offer-list {
+        z-index: 10 !important;
+        .offl {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin: 2rem 0;
+          .icon-div {
+            background-color: #edf5ff;
+            width: 65px;
+            height: 65px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .offl-info {
+            max-width: 250px;
+          }
+        }
+      }
+    }
+  }
+  .main-cars {
+    .car-card-container {
+      .car-card {
+        min-width: 220px;
+        border-radius: 6px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+        .car-img {
+          height: 100px;
+          width: 100%;
+          img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+          }
+        }
+        .short-info {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          div {
+            p {
+              margin: 0;
+            }
+          }
+        }
+        .price-div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-weight: 700;
+          p:first-child {
+            color: rgb(90, 90, 90);
+          }
+          span {
+            font-weight: 400;
+            color: gray;
+          }
+        }
+        .rent-btn-div {
+          button {
+            border: none;
+            width: 100%;
+            background-color: #1571d1;
+            color: white;
+            border-radius: 6px;
+            padding: 0.25rem 0;
+          }
+        }
+      }
+    }
+    .show-cars {
+      .show-cars-btn {
+        border: 1.5px solid rgba(128, 128, 128, 0.5);
+        background-color: transparent;
+        border-radius: 6px;
+        padding: 0.25rem 2rem;
+      }
+    }
+  }
+}
+
+.landing-titles {
+  background-color: #edf5ff;
+  color: #1571d1;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin: auto;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1000%);
+  }
+}

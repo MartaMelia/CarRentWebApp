@@ -1,0 +1,78 @@
+<div class="cars-container my-5">
+  <div class="container">
+    <!-- <div class="filter-container">
+      <h5 class="mb-4">ფილტრი</h5>
+      <div class="filters d-flex gap-5 flex-wrap">
+        <div class="location">
+          <label for="city">მდებარეობა</label>
+          <select name="city" id="city">
+            <option value="" selected disabled>ქალაქი</option>
+            <option value="">თბილისი</option>
+            <option value="">ქუთაისი</option>
+            <option value="">ბათუმი</option>
+          </select>
+        </div>
+        <div class="years">
+          <label for="year-from">წელი</label>
+          <select name="year-from" id="year-from">
+            <option value="" selected disabled>-დან</option>
+            <option value="">2000</option>
+            <option value="">2001</option>
+            <option value="">2002</option>
+          </select>
+          <select name="year-until" id="year-until">
+            <option value="" selected disabled>-მდე</option>
+            <option value="">2000</option>
+            <option value="">2001</option>
+            <option value="">2002</option>
+          </select>
+        </div>
+        <div class="space">
+          <label for="seats">ადგილების რაოდენობა</label>
+          <select name="seats" id="seats">
+            <option value="" selected disabled>ტევადობა</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+          </select>
+        </div>
+      </div>
+    </div> -->
+    <hr class="my-4" />
+    <div class="main-cars">
+      <div class="car-card-container">
+        <div class="car-card" *ngFor="let car of cars">
+          <div class="car-img">
+            <img src="{{ car.picture }}" alt="car" />
+          </div>
+          <div class="ms-3">
+            <h5 class="mb-2">{{ car.brand + " " + car.model }}</h5>
+            <div class="short-info">
+              <div>
+                <p>{{ car.passengers }} passengers</p>
+                <p>{{ car.city }}</p>
+              </div>
+              <div>
+                <p>{{ car.transmition }}</p>
+                <p>{{ car.year }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="price-rent-div ms-auto">
+            <div class="price-div">
+              <p>₾ {{ car.price }} <span>/day</span></p>
+            </div>
+            <div class="rent-btn-div">
+              <button type="button" (click)="rent(car.id)">
+                Rent now<span class="ms-2 text-white">&#10140;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

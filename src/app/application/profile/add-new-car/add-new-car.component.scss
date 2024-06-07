@@ -1,0 +1,28 @@
+@media screen and (max-width: 446px) {
+  .car-details {
+    width: 100%;
+  }
+}
+
+.add-new-car-component {
+  position: relative;
+  z-index: 0;
+  .container {
+    form {
+      width: 100%;
+      mat-form-field {
+        width: 100%;
+      }
+      .add-car-btn {
+        text-align: center;
+        button {
+          border: none;
+          border-radius: 0.25rem;
+          background-color: #3d84ca;
+          padding: 0.25rem 2rem;
+          color: white;
+        }
+      }
+    }
+  }
+}

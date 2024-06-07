@@ -1,0 +1,94 @@
+<div class="add-new-car-component mt-5">
+  <div class="container">
+    <h3 class="mb-3">ახალი მანქანის დამატება</h3>
+    <hr />
+    <form action="">
+      <div class="d-flex justify-content-between flex-wrap">
+        <div class="car-details">
+          <mat-form-field>
+            <mat-label>მწარმოებელი</mat-label>
+            <mat-select
+              [(ngModel)]="selectedBrand"
+              name="car-brand"
+              (ngModelChange)="updateModels()"
+            >
+              <mat-option *ngFor="let car of carBrands" [value]="car.brand">{{
+                car.brand
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="car-details">
+          <mat-form-field>
+            <mat-label>მოდელი</mat-label>
+            <mat-select [(ngModel)]="selectedModel" name="model">
+              <mat-option
+                *ngFor="let model of selectedBrandModels"
+                [value]="model"
+                >{{ model }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="car-details">
+          <mat-form-field>
+            <mat-label>წელი</mat-label>
+            <mat-select [(ngModel)]="selectedYear" name="year">
+              <mat-option *ngFor="let year of years" [value]="year">{{
+                year
+              }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="car-details">
+          <mat-form-field>
+            <mat-label>ტრანსმისია</mat-label>
+            <mat-select [(ngModel)]="selectedTransmission" name="year">
+              <mat-option value="automatic">ავტომატიკა</mat-option>
+              <mat-option value="manual">მექანიკა</mat-option>
+              <mat-option value="tiptronic">ტიპტრონიკი</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="car-details">
+          <mat-form-field class="example-full-width">
+            <mat-label>ბაკის მოცულობა</mat-label>
+            <input matInput placeholder="მაგ. 60" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>ქალაქი</mat-label>
+          <mat-select [(ngModel)]="selectedCity" name="city">
+            <mat-option *ngFor="let city of cityList" [value]="city">{{
+              city
+            }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>ფასი დღიურად</mat-label>
+          <input matInput placeholder="მაგ. 90" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field class="example-full-width">
+          <mat-label>ტელეფონი</mat-label>
+          <input matInput placeholder="მაგ. 90" [value]="phoneNumber" />
+        </mat-form-field>
+      </div>
+      <div>
+        <input type="file" name="myImage" accept="image/*" multiple />
+      </div>
+      <div class="add-car-btn my-5">
+        <button>Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

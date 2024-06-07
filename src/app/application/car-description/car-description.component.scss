@@ -1,0 +1,33 @@
+.car-description-component {
+  .container {
+    .slider {
+      width: 500px;
+      margin: 0 auto;
+      .carousel-inner {
+        border-radius: 12px;
+        img {
+          height: 400px;
+          object-fit: cover;
+        }
+      }
+    }
+    .details {
+      width: calc(100%);
+      border-radius: 12px;
+      border: 1px solid rgba(128, 128, 128, 0.25);
+    }
+    th, td {
+      max-width: 100px;
+    }
+    .rent-btn {
+      margin: 2rem 0;
+      button {
+        border: none;
+        border-radius: 0.25rem;
+        background-color: #3d84ca;
+        padding: 0.25rem 2rem;
+        color: white;
+      }
+    }
+  }
+}

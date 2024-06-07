@@ -1,0 +1,107 @@
+<div class="car-description-component mt-5">
+  <div class="container">
+    <h3 class="mb-3">{{ model?.brand }} {{ model?.model }}</h3>
+    <hr />
+
+    <div class="d-flex gap-5 flex-wrap">
+      <div class="slider">
+        <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="{{ model!.pictures[0] }}"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{{ model!.pictures[1] }}"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="{{ model!.pictures[0] }}"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExample"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="details p-3">
+        <h6>Detailed Info</h6>
+        <hr />
+        <div>
+          <div class="row">
+            <div class="col-md-4">
+              <h6>Brand</h6>
+              <p>{{ model?.brand }}</p>
+            </div>
+            <div class="col-md-4">
+              <h6>Model</h6>
+              <p>{{ model?.model }}</p>
+            </div>
+            <div class="col-md-4">
+              <h6>წელი</h6>
+              <p>{{ model?.year }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h6>Transmition</h6>
+              <p>{{ model?.transmition }}</p>
+            </div>
+            <div class="col-md-4">
+              <h6>Capacity</h6>
+              <p>{{ model?.passangers }}</p>
+            </div>
+            <div class="col-md-4">
+              <h6>Fuel Capacity</h6>
+              <p>{{ model?.fuelCapacity }}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h6>Phone Number</h6>
+              <p>{{ model?.phoneNumber }}</p>
+            </div>
+            <div class="col-md-4">
+              <h6>City</h6>
+              <p>{{ model?.city }}</p>
+            </div>
+            <div class="col-md-4">
+              <h6>Price a day</h6>
+              <p>{{ model?.price }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rent-btn">
+      <button>Rent</button>
+    </div>
+  </div>
+</div>
